@@ -49,9 +49,9 @@
 <div class="grid" id="grid"></div>
 
 <script>
-  // === REPLACE THESE 2 LINES ===
-  const SUPABASE_URL = "YOUR_SUPABASE_URL";
-  const SUPABASE_ANON_KEY = "YOUR_ANON_KEY";
+  // === YOUR PROJECT - URL + KEY DON SET ===
+  const SUPABASE_URL = "https://pfrpgijjqajwuhyfcdgw.supabase.co";
+  const SUPABASE_ANON_KEY = "sb_publishable_XCDG8j8Te4UHw_qw8yOnJA_hThHuRdT";
   const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
   let listings = [];
@@ -85,7 +85,7 @@
       <div class="card" onclick="alert('${l.title} - Detail page coming next')">
         <div class="card-top">${icons[l.platform] || '🌐'}</div>
         <div class="card-body">
-          <span class="badge">✓ VERIFIED ${l.is_verified ? '' : ''}</span>
+          <span class="badge">✓ VERIFIED</span>
           <h3>${l.title}</h3>
           <div class="meta">${l.platform} • ${l.country} • ${l.followers?.toLocaleString()} followers • ${l.account_age || ''}</div>
           <div class="price"><div><b>₦${l.price_naira?.toLocaleString()}</b><br><span>$${l.price_usdt} USDT</span></div><button class="btn">View</button></div>
